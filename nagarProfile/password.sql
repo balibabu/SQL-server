@@ -1,0 +1,6 @@
+select * from [User]
+
+update [User] set 
+[Password]='B07701EB386DA3649712D8850387598297BCF2CC', 
+Salt='77CEEDDF-7EA1-446A-ABAA-CD38F7188FF2'
+where Id=2;
