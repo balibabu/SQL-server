@@ -1,0 +1,25 @@
+Add Migration Script
+
+ProjectName: DataAccess
+Folder: Migration
+File: Scripts.txt
+
+--DataAccess/ Migration/ Scripts.txt
+Condidition: If not exists then run query. Eg:
+If not exists (Select Top 1 1 from Information_Schema.Columns where Table_Name = 'Recipient' and Column_Name = 'DocumentDataId')
+Begin
+ALTER TABLE Event.Recipient
+ADD DocumentDataId UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID();
+End
+
+
+
+--Projectname/program.cs
+method: ConfigureServices
+connection String
+
+using DatabaseContext db = new DatabaseContext(Configuration["AppSettings:DbConnection"]);
+{
+    string migrationScripts = QueryBuilder.GetCommandText["DataAccess.Migration", "Scripts"];
+    var result = db.ExecuteNonQueryAsync(System.Data.CommandType.Text, migrationScripts).Result;
+}
