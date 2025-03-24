@@ -8,7 +8,7 @@ create table [Data].[Business] (
 	BusinessTypeId int,
 	GPS nvarchar(50),
 	Photo nvarchar(50),
-	RegistrationNo nvarchar(50),
+	RegistrationNo nvarchar(100),
 	WardId int,
 	CreatedBy int,
 	CreatedDate datetime,

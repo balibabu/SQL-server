@@ -1,0 +1,1 @@
+EXEC sp_RENAME '[Data].[Business].[BusinessOwnershipId]' , 'BusinessOwnershipTypeId', 'COLUMN'

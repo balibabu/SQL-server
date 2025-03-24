@@ -22,3 +22,5 @@ values
 ('01096f20-1ff2-4e37-a78c-378d51adcde8',N'विशाल ,बिबिका चिया पसल',1, null,N'27.6809737, 85.6576725', N'1716533298672.jpg', N'null', 12, 1, '2024-05-24 14:05:05')
 
 select * from  [Data].Business 
+select count(1) from Answer
+delete from [Data].Business 
